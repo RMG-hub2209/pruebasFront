@@ -1,24 +1,29 @@
 <div class="header">
   <h2>PRUEBA TÉCNICA DESARROLLADOR WEB JR</h2>
-  <h4>Generador de IP</h4>
 </div>
 
-<div>
+<div class="strinIp">
   <form>
     <mat-form-field>
       <mat-label>Ingresa los dígitos</mat-label>
-      <input matInput type="number" [formControl]="ipControl">
+      <input matInput [formControl]="ipControl">
     </mat-form-field>
+    <button mat-raised-button (click)="clearString()" class="btn-clr">Limpiar</button>
   </form>
 </div>
 
-<div *ngIf="ipControl.valid">
-  <button mat-raised-button (click)="generateIp()">
+<div *ngIf="ipControl.valid" class="btn-ip">
+  <button mat-raised-button (click)="generateIp()" >
     Generar Ip
   </button>
 </div>
 
-<!--<div>
-  <mat-label [value]="ip.number"></mat-label>
-  <input matInput>
-</div>-->
+
+<div class="ipNew">
+  <form>
+    <mat-form-field>
+      <input matInput [formControl]="newIpControl">
+    </mat-form-field>
+    <button mat-raised-button (click)="clear()" class="btn-clr">Limpiar</button>
+  </form>
+</div>

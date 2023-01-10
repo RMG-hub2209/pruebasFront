@@ -17,6 +17,6 @@ export class GenIpServiceService {
 
   genIp(string: any): Observable<any>{
     console.log(string);
-    return this.http.post<any>(this.ipBack, string);
+    return this.http.post<any>(this.ipBack + '/' + string, null);
   }
 }

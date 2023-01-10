@@ -1,3 +1,3 @@
 export const environment = {
-  pruebaBack: 'http://localhost:8080/'
+  pruebaBack: 'http://localhost:8080'
 };
